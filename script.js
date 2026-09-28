@@ -1,34 +1,35 @@
-/* =========================================================
-   PORTFÓLIO — script.js
-   Cada bloco abaixo está comentado para facilitar o entendimento.
-   ========================================================= */
-
-/* ---------------------------------------------------------
-   1. LISTA DE PROJETOS
-   Edite/adicione objetos neste array para atualizar os cards
-   da seção "Meus Projetos" — o HTML é gerado automaticamente.
-   --------------------------------------------------------- */
 const projetos = [
   {
-    nome: "Nome do Projeto 1",
-    descricao: "Breve descrição do que o projeto faz e qual problema ele resolve.",
+    nome: "Reforço Lógico",
+    sigla: "RL",
+    descricao: "Coleção de exercícios práticos de lógica de programação, treinando estrutura, sequência e resolução de problemas.",
+    tecnologias: ["HTML"],
+    github: "https://github.com/yasmimpassos9/reforcologico",
+    projeto: "projetos/reforco-logico.html"
+  },
+  {
+    nome: "Álbum de Figurinhas",
+    sigla: "AF",
+    descricao: "Álbum de figurinhas interativo, exercitando lógica de programação e manipulação de elementos com JavaScript.",
+    tecnologias: ["JavaScript"],
+    github: "https://github.com/yasmimpassos9/logicarafael/tree/main/logicaRafael",
+    projeto: "projetos/album-de-figurinhas.html"
+  },
+  {
+    nome: "Sorteador de Jogos",
+    sigla: "SJ",
+    descricao: "Sorteador de partidas para um campeonato fictício, sorteando confrontos entre times de forma aleatória.",
     tecnologias: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/seu-usuario/seu-projeto-1",
-    projeto: "https://seu-projeto-1.com"
+    github: "https://github.com/yasmimpassos9/sorteador-de-jogos",
+    projeto: "projetos/sorteador-de-jogos.html"
   },
   {
-    nome: "Nome do Projeto 2",
-    descricao: "Breve descrição do que o projeto faz e qual problema ele resolve.",
-    tecnologias: ["JavaScript", "API"],
-    github: "https://github.com/seu-usuario/seu-projeto-2",
-    projeto: "https://seu-projeto-2.com"
-  },
-  {
-    nome: "Nome do Projeto 3",
-    descricao: "Breve descrição do que o projeto faz e qual problema ele resolve.",
-    tecnologias: ["HTML", "CSS"],
-    github: "https://github.com/seu-usuario/seu-projeto-3",
-    projeto: "https://seu-projeto-3.com"
+    nome: "Catálogo de Produtos",
+    sigla: "CP",
+    descricao: "Catálogo de produtos com listagem organizada de itens, praticando estruturação e exibição de dados.",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/yasmimpassos9/catalogo_kelivem",
+    projeto: "projetos/catalogo-produtos.html"
   }
 ];
 
@@ -44,26 +45,18 @@ function renderizarProjetos() {
     const card = document.createElement("article");
     card.className = "project-card reveal";
 
-    // ícone simples com as iniciais do nome do projeto
-    const iniciais = projeto.nome
-      .split(" ")
-      .map((palavra) => palavra[0])
-      .join("")
-      .slice(0, 2)
-      .toUpperCase();
-
     // tags de tecnologias
     const tagsHtml = projeto.tecnologias
       .map((tech) => `<span class="tech-pill">${tech}</span>`)
       .join("");
 
     card.innerHTML = `
-      <div class="project-icon" aria-hidden="true">${iniciais}</div>
+      <div class="project-icon" aria-hidden="true">${projeto.sigla}</div>
       <h3 class="project-name">${projeto.nome}</h3>
       <p class="project-desc">${projeto.descricao}</p>
       <div class="project-tech">${tagsHtml}</div>
       <div class="project-actions">
-        <a class="btn btn-primary btn-small" href="${projeto.projeto}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+        <a class="btn btn-primary btn-small" href="${projeto.projeto}">Ver projeto</a>
         <a class="btn btn-outline btn-small" href="${projeto.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     `;

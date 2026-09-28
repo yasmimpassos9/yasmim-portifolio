@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Produtos · Projeto de Yasmim Bernardo dos Passos</title>
+  <meta name="description" content="Catálogo de produtos com listagem organizada de itens." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="../index.html" class="logo" aria-label="Voltar ao início">
+        <span class="logo-badge">YB</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="../index.html" class="nav-link">Início</a>
+        <a href="../index.html#sobre" class="nav-link">Sobre mim</a>
+        <a href="../index.html#projetos" class="nav-link">Projetos</a>
+        <a href="../index.html#contato" class="nav-link">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container project-hero-inner">
+        <div>
+          <a href="../index.html#projetos" class="back-link">&larr; Voltar aos projetos</a>
+          <p class="project-kicker">Projeto</p>
+          <h1 class="project-hero-title">Catálogo de Produtos</h1>
+          <p class="project-hero-desc">
+            Um catálogo de produtos com listagem organizada de itens, exibindo informações como
+            nome e detalhes de cada produto em cards padronizados.
+          </p>
+          <div class="project-tech">
+            <span class="tech-pill">HTML</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+          <div class="project-hero-actions">
+            <a class="btn btn-primary" href="https://github.com/yasmimpassos9/catalogo_kelivem" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            <a class="btn btn-outline" href="../index.html#projetos">Voltar ao portfólio</a>
+          </div>
+        </div>
+
+        <div class="project-mockup" aria-hidden="true">
+          <div class="mockup-card-stack">
+            <div class="mockup-product-card">
+              <div class="swatch"></div>
+              <div class="lines"><span style="width: 70%;"></span><span></span></div>
+            </div>
+            <div class="mockup-product-card">
+              <div class="swatch"></div>
+              <div class="lines"><span style="width: 80%;"></span><span></span></div>
+            </div>
+            <div class="mockup-product-card">
+              <div class="swatch"></div>
+              <div class="lines"><span style="width: 60%;"></span><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content">
+      <div class="container">
+        <h2>O que o projeto faz</h2>
+        <p>
+          O projeto organiza produtos em um catálogo visual, com cada item apresentado de forma
+          clara e padronizada — um exercício de estruturação e exibição de dados em uma
+          interface organizada.
+        </p>
+        <p>
+          Para ver o código completo, acesse o repositório no GitHub pelo botão acima.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Yasmim Bernardo dos Passos</p>
+      <p class="footer-note">Desenvolvido com criatividade, dedicação e tecnologia.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

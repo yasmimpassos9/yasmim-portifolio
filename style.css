@@ -1,9 +1,3 @@
-/* =========================================================
-   PORTFÓLIO — Yasmim Bernardo dos Passos
-   Paleta: rosa claro, rosa/malva, dourado, rosa acinzentado, vinho
-   ========================================================= */
-
-/* -------------------- RESET BÁSICO -------------------- */
 *,
 *::before,
 *::after {
@@ -448,59 +442,8 @@ button:focus-visible {
 }
 
 /* =========================================================
-   EXPERIÊNCIA / TIMELINE
+   TAGS (reutilizadas na seção Habilidades)
    ========================================================= */
-.timeline {
-  position: relative;
-  padding-left: 2.4rem;
-  margin-bottom: 2.8rem;
-}
-
-.timeline-marker {
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 0 5px var(--bg-alt);
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 20px;
-  bottom: 0;
-  width: 2px;
-  background: var(--bg-alt);
-}
-
-.timeline-card {
-  background: var(--white);
-  border-radius: var(--radius-md);
-  padding: 2rem 2.2rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.timeline-title {
-  font-family: var(--font-display);
-  color: var(--heading);
-  font-size: 1.3rem;
-  margin-bottom: 0.9rem;
-}
-
-.timeline-card p {
-  margin-bottom: 0.8rem;
-  color: var(--text);
-}
-
-.timeline-card p:last-child {
-  margin-bottom: 0;
-}
-
-/* tags reutilizadas em Experiência e Habilidades */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -600,9 +543,6 @@ button:focus-visible {
   gap: 0.7rem;
 }
 
-/* =========================================================
-   HABILIDADES
-   ========================================================= */
 .skills-group {
   margin-bottom: 2.4rem;
 }
@@ -663,8 +603,226 @@ button:focus-visible {
 }
 
 /* =========================================================
-   RODAPÉ
+   PÁGINAS INDIVIDUAIS DE PROJETO (pasta /projetos)
    ========================================================= */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.92rem;
+  margin-bottom: 1.6rem;
+}
+
+.back-link:hover {
+  color: var(--heading);
+}
+
+.project-hero {
+  padding-top: calc(var(--header-h) + 3.5rem);
+  padding-bottom: 4rem;
+}
+
+.project-hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.project-kicker {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.project-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  color: var(--heading);
+  margin-bottom: 1rem;
+}
+
+.project-hero-desc {
+  color: var(--text-soft);
+  max-width: 46ch;
+  margin-bottom: 1.6rem;
+}
+
+.project-hero-actions {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.project-content {
+  background: var(--bg-alt);
+  padding-block: 4.5rem;
+}
+
+.project-content h2 {
+  font-family: var(--font-display);
+  color: var(--heading);
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.project-content p {
+  max-width: 62ch;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.project-content ul {
+  max-width: 62ch;
+  margin: 1rem 0 1.4rem 1.2rem;
+}
+
+.project-content li {
+  list-style: disc;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+
+.project-mockup {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1.8rem;
+}
+
+.mockup-list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--bg-alt);
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.mockup-list-item:last-child {
+  border-bottom: none;
+}
+
+.mockup-list-item span {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  color: var(--heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mockup-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+.mockup-badge {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  background: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.mockup-badge:nth-child(3n+1) {
+  background: var(--bg-alt);
+  color: var(--heading);
+}
+
+.mockup-badge:nth-child(4n+2) {
+  border: 1.5px solid var(--gold);
+}
+
+.mockup-card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.mockup-product-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--bg-main);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+}
+
+.mockup-product-card .swatch {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.mockup-product-card .lines {
+  flex-grow: 1;
+}
+
+.mockup-product-card .lines span {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-alt);
+  margin-bottom: 6px;
+}
+
+.mockup-product-card .lines span:last-child {
+  width: 55%;
+  margin-bottom: 0;
+}
+
+.mockup-sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.mockup-sticker {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px dashed var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-sticker.filled {
+  border-style: solid;
+  background: var(--accent);
+}
+
+.mockup-sticker.filled::after {
+  content: "★";
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .project-hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .site-footer {
   background: var(--heading);
   color: var(--bg-main);
@@ -678,9 +836,6 @@ button:focus-visible {
   color: var(--gold);
 }
 
-/* =========================================================
-   ANIMAÇÃO DE ENTRADA (reveal on scroll)
-   ========================================================= */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -703,9 +858,6 @@ button:focus-visible {
   }
 }
 
-/* =========================================================
-   RESPONSIVIDADE
-   ========================================================= */
 @media (max-width: 960px) {
   .hero-inner,
   .about-inner {
